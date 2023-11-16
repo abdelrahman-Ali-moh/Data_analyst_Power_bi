@@ -1,10 +1,10 @@
 use master;
 go 
 select * from dbo.['2016$'] 
---clean rows for null values
+--delete null values from rows
 DELETE FROM dbo.['2016$'] 
 WHERE id IS NULL;
--- grade and price of house > 250000
+-- show id,grade and built year when price of house > 250000
 select id,[grade of the house],[Built Year] from dbo.['2016$'] where Price >250000
 -- show house prices when grade of house = 10 star 
 SELECT Price
@@ -19,7 +19,7 @@ select  avg(Price) as "avg price of house"  from dbo.['2016$']
 SELECT * INTO joined FROM dbo.['2016$'] UNION ALL SELECT * FROM dbo.['2017$'];
 -- show joined table
 select * from joined
---clean rows for null values
+--delete null values from rows
 DELETE FROM joined
 WHERE id IS NULL;
 -- avg price houses 
