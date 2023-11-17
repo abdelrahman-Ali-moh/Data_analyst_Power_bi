@@ -1,7 +1,7 @@
 use master;
 go 
 select * from dbo.['2016$'] 
---delete null values from rows
+--delete null values from id column
 DELETE FROM dbo.['2016$'] 
 WHERE id IS NULL;
 -- show id,grade and built year when price of house > 250000
