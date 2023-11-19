@@ -3,7 +3,7 @@ USE SUPERSTORE;
 -- show dataset
 select * from superstore limit 5;
 -- total sales and profit per year
-SELECT DATE_TRUNC('year',orderdate) as date,
+SELECT DATE_TRUNC('year',orderdate) as year,
 SUM(sales) as sales_title
 sum(profit) as profit_title
 from SUPERSTORE
