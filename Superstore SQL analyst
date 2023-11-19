@@ -1,5 +1,5 @@
 -- use superstore dataset
-USE SUPERSTORE
+USE SUPERSTORE;
 -- show dataset
 select * from superstore limit 5;
 -- total sales and profit per year
